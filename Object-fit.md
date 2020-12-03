@@ -6,7 +6,7 @@ Following script changes all images to div with background image with background
 
 ```
  if (document.documentMode || /Edge/.test(navigator.userAgent)) {
-        jQuery('.StartbildschirmSlider img').each(function(){
+        jQuery('{class} img').each(function(){
             var t = jQuery(this),
                 s = 'url(' + t.attr('src') + ')',
                 p = t.parent(),
@@ -19,7 +19,7 @@ Following script changes all images to div with background image with background
                 'background-repeat'     : 'no-repeat',
                 'background-position'   : '50% 20%',
                 'background-image'      : s,
-                'width'                 : "100%"
+                'width'                 : "100%" //Optional try out
             });
             t.hide();
         });
